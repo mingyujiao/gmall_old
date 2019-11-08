@@ -1,7 +1,7 @@
 package com.learn.gmall.user.service;
 
 
-import com.learn.gmall.user.bean.UmsMember;
+import com.learn.gmall.user.bean.UserInfo;
 
 import java.util.List;
 
@@ -11,13 +11,13 @@ import java.util.List;
  */
 public interface UserService {
 
-    List<UmsMember> getUserInfoList();
+    List<UserInfo> getUserInfoList();
 
-    void addUser(UmsMember userInfo);
+    void addUser(UserInfo userInfo);
 
-    void updateUser(UmsMember userInfo);
+    void updateUser(UserInfo userInfo);
 
-    void updateUserByName(String name, UmsMember userInfo);
+    void updateUserByName(String name, UserInfo userInfo);
 
-    void delUser(UmsMember userInfo);
+    void delUser(UserInfo userInfo);
 }

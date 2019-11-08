@@ -1,6 +1,6 @@
 package com.learn.gmall.user.service.impl;
 
-import com.learn.gmall.user.bean.UmsMember;
+import com.learn.gmall.user.bean.UserInfo;
 import com.learn.gmall.user.mapper.UserMapper;
 import com.learn.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,28 +19,28 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
 
     @Override
-    public List<UmsMember> getUserInfoList() {
-        List<UmsMember> userInfoList = userMapper.selectAll();
+    public List<UserInfo> getUserInfoList() {
+        List<UserInfo> userInfoList = userMapper.selectAll();
         return userInfoList;
     }
 
     @Override
-    public void addUser(UmsMember userInfo) {
+    public void addUser(UserInfo userInfo) {
         userMapper.insert(userInfo);
     }
 
     @Override
-    public void updateUser(UmsMember userInfo) {
+    public void updateUser(UserInfo userInfo) {
         userMapper.updateByPrimaryKey(userInfo);
     }
 
     @Override
-    public void updateUserByName(String name, UmsMember userInfo) {
+    public void updateUserByName(String name, UserInfo userInfo) {
 
     }
 
     @Override
-    public void delUser(UmsMember userInfo) {
+    public void delUser(UserInfo userInfo) {
 
     }
 }

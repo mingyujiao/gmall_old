@@ -1,6 +1,6 @@
 package com.learn.gmall.user.controller;
 
-import com.learn.gmall.user.bean.UmsMember;
+import com.learn.gmall.user.bean.UserInfo;
 import com.learn.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/allusers")
-    public List<UmsMember> getAllUsers(){
+    public List<UserInfo> getAllUsers(){
         return userService.getUserInfoList();
     }
 }
