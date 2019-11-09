@@ -1,6 +1,6 @@
 package com.learn.gmall.user.mapper;
 
-import com.learn.gmall.user.bean.UserInfo;
+import com.learn.gmall.bean.UserInfo;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

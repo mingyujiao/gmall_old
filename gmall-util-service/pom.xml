@@ -10,12 +10,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>gmall-service-util</artifactId>
+    <artifactId>gmall-util-service</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.learn.gmall</groupId>
-            <artifactId>gmall-common-util</artifactId>
+            <artifactId>gmall-util-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

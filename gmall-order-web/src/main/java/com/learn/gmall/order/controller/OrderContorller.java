@@ -1,8 +1,10 @@
 package com.learn.gmall.order.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.learn.gmall.bean.UserInfo;
 import com.learn.gmall.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -13,11 +15,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class OrderContorller {
 
+    @Reference
     UserService userService;
 
     @GetMapping("trade")
-    public UserInfo trade(Integer userId){
-        UserInfo userInfo = userService.getUserInfoList().get(0);
+    public UserInfo trade(@RequestParam("userId") String userId){
+        UserInfo userInfo = userService.getUserInfoById(userId);
         return userInfo;
     }
 }

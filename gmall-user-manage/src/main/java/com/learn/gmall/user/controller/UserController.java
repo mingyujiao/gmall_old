@@ -1,13 +1,10 @@
 package com.learn.gmall.user.controller;
 
-import com.learn.gmall.user.bean.UserInfo;
-import com.learn.gmall.user.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.learn.gmall.bean.UserInfo;
+import com.learn.gmall.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @author jiaomingyu5778@gmail.com
@@ -16,11 +13,11 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    @Autowired
+    @Reference
     UserService userService;
 
     @GetMapping("/allusers")
-    public List<UserInfo> getAllUsers(){
-        return userService.getUserInfoList();
+    public UserInfo getUserInfoById(String id){
+        return userService.getUserInfoById(id);
     }
 }

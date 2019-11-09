@@ -25,7 +25,7 @@
 
         <dependency>
             <groupId>com.learn.gmall</groupId>
-            <artifactId>gmall-web-util</artifactId>
+            <artifactId>gmall-util-web</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
