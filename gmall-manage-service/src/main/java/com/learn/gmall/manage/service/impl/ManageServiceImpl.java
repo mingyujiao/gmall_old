@@ -1,14 +1,17 @@
 package com.learn.gmall.manage.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.learn.gmall.bean.PmsBaseAttrInfo;
 import com.learn.gmall.bean.PmsBaseCatalog1;
 import com.learn.gmall.bean.PmsBaseCatalog2;
 import com.learn.gmall.bean.PmsBaseCatalog3;
+import com.learn.gmall.manage.mapper.PmsBaseAttrInfoMapper;
 import com.learn.gmall.manage.mapper.PmsBaseCatalog1Mapper;
 import com.learn.gmall.manage.mapper.PmsBaseCatalog2Mapper;
 import com.learn.gmall.manage.mapper.PmsBaseCatalog3Mapper;
 import com.learn.gmall.service.ManageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -27,6 +30,9 @@ public class ManageServiceImpl implements ManageService {
 
     @Autowired
     PmsBaseCatalog3Mapper catalog3Mapper;
+
+    @Autowired
+    PmsBaseAttrInfoMapper attrInfoMapper;
 
     @Override
     public List<PmsBaseCatalog1> getPmsBaseCatalog1() {
@@ -47,5 +53,17 @@ public class ManageServiceImpl implements ManageService {
         pmsBaseCatalog3.setCatalog2Id(catalog2Id);
         List<PmsBaseCatalog3> pmsBaseCatalog3s = catalog3Mapper.select(pmsBaseCatalog3);
         return pmsBaseCatalog3s;
+    }
+
+    @Override
+    public List<PmsBaseAttrInfo> getPmsBaseAttrInfo(String catalog3Id) {
+
+        Example example = new Example(PmsBaseAttrInfo.class);
+
+        example.createCriteria().andEqualTo("catalog3Id", catalog3Id);
+
+        List<PmsBaseAttrInfo> pmsBaseAttrInfos = attrInfoMapper.selectByExample(example);
+
+        return pmsBaseAttrInfos;
     }
 }

@@ -1,6 +1,7 @@
 package com.learn.gmall.manage.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.learn.gmall.bean.PmsBaseAttrInfo;
 import com.learn.gmall.bean.PmsBaseCatalog1;
 import com.learn.gmall.bean.PmsBaseCatalog2;
 import com.learn.gmall.bean.PmsBaseCatalog3;
@@ -39,5 +40,11 @@ public class ManageController {
     public List<PmsBaseCatalog3> getBaseCatalog3(String catalog2Id){
         List<PmsBaseCatalog3> pmsBaseCatalog3 = manageService.getPmsBaseCatalog3(catalog2Id);
         return pmsBaseCatalog3;
+    }
+
+    @PostMapping("attrInfoList")
+    public List<PmsBaseAttrInfo> getPmsBaseAttrInfoList(String catalog3Id){
+        List<PmsBaseAttrInfo> attrInfos = manageService.getPmsBaseAttrInfo(catalog3Id);
+        return attrInfos;
     }
 }
