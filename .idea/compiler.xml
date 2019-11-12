@@ -9,16 +9,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gmall-user-manage" />
         <module name="gmall-util-common" />
+        <module name="gmall-manage-web" />
         <module name="gmall-bean" />
         <module name="gmall-order-web" />
         <module name="gmall-util-web" />
         <module name="gmall-interface" />
         <module name="gmall-util-service" />
+        <module name="gmall-manage-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gmall-bean" target="1.8" />
       <module name="gmall-interface" target="1.8" />
+      <module name="gmall-manage-service" target="1.8" />
+      <module name="gmall-manage-service (1)" target="1.8" />
+      <module name="gmall-manage-web" target="1.8" />
       <module name="gmall-order-web" target="1.8" />
       <module name="gmall-parent" target="1.8" />
       <module name="gmall-user-manage" target="1.8" />
@@ -31,6 +36,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gmall-bean" options="" />
       <module name="gmall-interface" options="" />
+      <module name="gmall-manage-service" options="" />
+      <module name="gmall-manage-service (1)" options="-parameters" />
+      <module name="gmall-manage-web" options="" />
       <module name="gmall-order-web" options="" />
       <module name="gmall-parent" options="" />
       <module name="gmall-user-manage" options="" />
