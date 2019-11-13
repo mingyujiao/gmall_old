@@ -8,6 +8,7 @@ import com.learn.gmall.bean.PmsBaseCatalog3;
 import com.learn.gmall.service.ManageService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -42,9 +43,15 @@ public class ManageController {
         return pmsBaseCatalog3;
     }
 
-    @PostMapping("attrInfoList")
+    @PostMapping("getAttrInfoList")
     public List<PmsBaseAttrInfo> getPmsBaseAttrInfoList(String catalog3Id){
         List<PmsBaseAttrInfo> attrInfos = manageService.getPmsBaseAttrInfo(catalog3Id);
         return attrInfos;
+    }
+
+    @PostMapping
+    public String saveAtrrInfo(@RequestBody PmsBaseAttrInfo pmsBaseAttrInfo){
+        manageService.saveAttrInfo(pmsBaseAttrInfo);
+        return "success";
     }
 }

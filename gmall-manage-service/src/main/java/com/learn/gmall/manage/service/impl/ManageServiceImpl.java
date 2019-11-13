@@ -1,18 +1,14 @@
 package com.learn.gmall.manage.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.learn.gmall.bean.PmsBaseAttrInfo;
-import com.learn.gmall.bean.PmsBaseCatalog1;
-import com.learn.gmall.bean.PmsBaseCatalog2;
-import com.learn.gmall.bean.PmsBaseCatalog3;
-import com.learn.gmall.manage.mapper.PmsBaseAttrInfoMapper;
-import com.learn.gmall.manage.mapper.PmsBaseCatalog1Mapper;
-import com.learn.gmall.manage.mapper.PmsBaseCatalog2Mapper;
-import com.learn.gmall.manage.mapper.PmsBaseCatalog3Mapper;
+import com.learn.gmall.bean.*;
+import com.learn.gmall.manage.mapper.*;
 import com.learn.gmall.service.ManageService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 
+import java.beans.Transient;
 import java.util.List;
 
 /**
@@ -33,6 +29,9 @@ public class ManageServiceImpl implements ManageService {
 
     @Autowired
     PmsBaseAttrInfoMapper attrInfoMapper;
+
+    @Autowired
+    PmsBaseAttrValueMapper attrValueMapper;
 
     @Override
     public List<PmsBaseCatalog1> getPmsBaseCatalog1() {
@@ -65,5 +64,29 @@ public class ManageServiceImpl implements ManageService {
         List<PmsBaseAttrInfo> pmsBaseAttrInfos = attrInfoMapper.selectByExample(example);
 
         return pmsBaseAttrInfos;
+    }
+
+    @Override
+    @Transient
+    public void saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo) {
+
+        if (StringUtils.isNotBlank(pmsBaseAttrInfo.getId())) {
+            attrInfoMapper.updateByPrimaryKey(pmsBaseAttrInfo);
+        } else {
+            pmsBaseAttrInfo.setId(null);
+            attrInfoMapper.insertSelective(pmsBaseAttrInfo);
+        }
+
+        String id = pmsBaseAttrInfo.getId();
+
+        Example example = new Example(PmsBaseAttrValue.class);
+        example.createCriteria().andEqualTo("attrId",id);
+        attrInfoMapper.deleteByExample(example);
+
+        for (PmsBaseAttrValue attrValue: pmsBaseAttrInfo.getAttrValueList()) {
+            attrValue.setAttrId(id);
+            attrValueMapper.insertSelective(attrValue);
+        }
+
     }
 }

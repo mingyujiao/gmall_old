@@ -20,4 +20,6 @@ public interface ManageService {
     public List<PmsBaseCatalog3> getPmsBaseCatalog3(String catalog2Id);
 
     public List<PmsBaseAttrInfo> getPmsBaseAttrInfo(String catalog3Id);
+
+    public void saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo);
 }
