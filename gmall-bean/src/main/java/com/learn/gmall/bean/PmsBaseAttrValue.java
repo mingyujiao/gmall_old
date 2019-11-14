@@ -19,7 +19,7 @@ public class PmsBaseAttrValue implements Serializable {
     private static final long serialVersionUID = -8041772194991485117L;
     @Id
     @Column
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     @Column
     private String valueName;

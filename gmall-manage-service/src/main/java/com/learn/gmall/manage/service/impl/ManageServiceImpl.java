@@ -5,6 +5,7 @@ import com.learn.gmall.bean.*;
 import com.learn.gmall.manage.mapper.*;
 import com.learn.gmall.service.ManageService;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
 
@@ -89,4 +90,30 @@ public class ManageServiceImpl implements ManageService {
         }
 
     }
+
+    @Override
+    public PmsBaseAttrInfo getPmsBaseInfo(String atrrId) {
+
+        PmsBaseAttrInfo pmsBaseAttrInfo = attrInfoMapper.selectByPrimaryKey(atrrId);
+
+        PmsBaseAttrValue attrValueQuery = new PmsBaseAttrValue();
+        attrValueQuery.setAttrId(atrrId);
+
+        List<PmsBaseAttrValue> attrValueList = attrValueMapper.select(attrValueQuery);
+
+        pmsBaseAttrInfo.setAttrValueList(attrValueList);
+
+        return pmsBaseAttrInfo;
+    }
+
+    @Override
+    public void delPmsBaseAttrValue(@Param(value="id")PmsBaseAttrValue pmsBaseAttrValue) {
+
+        Example example = new Example(PmsBaseAttrValue.class);
+        example.createCriteria().andEqualTo("id",pmsBaseAttrValue.getId());
+
+        attrValueMapper.deleteByExample(example);
+    }
+
+
 }

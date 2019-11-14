@@ -1,9 +1,6 @@
 package com.learn.gmall.service;
 
-import com.learn.gmall.bean.PmsBaseAttrInfo;
-import com.learn.gmall.bean.PmsBaseCatalog1;
-import com.learn.gmall.bean.PmsBaseCatalog2;
-import com.learn.gmall.bean.PmsBaseCatalog3;
+import com.learn.gmall.bean.*;
 
 import java.util.List;
 
@@ -22,4 +19,8 @@ public interface ManageService {
     public List<PmsBaseAttrInfo> getPmsBaseAttrInfo(String catalog3Id);
 
     public void saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo);
+
+    public PmsBaseAttrInfo getPmsBaseInfo(String atrrId);
+
+    public void delPmsBaseAttrValue(PmsBaseAttrValue pmsBaseAttrValue);
 }
