@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1f666c1f-e4a0-49ce-9995-300029f4c544" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_dubbo_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-bean/gmall-bean.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-bean/gmall-bean.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-interface/gmall-interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-interface/gmall-interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-interface/target/classes/com/learn/gmall/service/ManageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-interface/target/classes/com/learn/gmall/service/ManageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/src/test/java/com/learn/gmall/gmallparent/GmallParentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/src/test/java/com/learn/gmall/gmallparent/GmallParentApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-util-common/gmall-util-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-util-common/gmall-util-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-util-service/gmall-util-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-util-service/gmall-util-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-util-web/gmall-util-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-util-web/gmall-util-web.iml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gmall" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gmall" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gmall" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gmall" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="pms_base_attr_info: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="gmall" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="gmall: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="pms_base_attr_value: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="jiaomingyu &lt;jiaomingyu5778@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\IntelliJ IDEA\IDEAProjects\gmall\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven/apache-maven-3.6.2" />
+        <option name="userSettingsFile" value="D:\apache-maven\apache-maven-3.6.2\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TI952RzY5Ao5EU6FCp96wScTD6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringBootCache" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IntelliJ IDEA\IDEAProjects\gmall\gmall-bean\src\main\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.learn.gmall.user.service.impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.learn.gmall.bean" />
+      <recent name="com.learn.gmall.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IntelliJ IDEA\IDEAProjects\gmall\gmall-bean\src\main\java\com\learn\gmall" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GmallParentApplication">
+    <configuration name="GmallManageServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-manage-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.gmall.manage.GmallManageServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallManageWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-manage-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.gmall.manage.GmallManageWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallOrderWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-order-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.gmall.order.GmallOrderWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallParentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-parent" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.gmall.gmallparent.GmallParentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallUserManageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-user-manage" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.gmall.user.GmallUserManageApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <option name="contentProportion" value="0.1411043" />
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ac5edcfa" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ac5edcfa" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1bf4c336" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f666c1f-e4a0-49ce-9995-300029f4c544" name="Default Changelist" comment="" />
+      <created>1573136555235</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573136555235</updated>
+      <workItem from="1573136556424" duration="5875000" />
+      <workItem from="1573214717115" duration="4229000" />
+      <workItem from="1573219008953" duration="11410000" />
+      <workItem from="1573235594277" duration="2388000" />
+      <workItem from="1573267469829" duration="8514000" />
+      <workItem from="1573284971473" duration="9208000" />
+      <workItem from="1573312794238" duration="7207000" />
+      <workItem from="1573563933829" duration="7761000" />
+      <workItem from="1573735641626" duration="3340000" />
+      <workItem from="1573745221606" duration="1193000" />
+      <workItem from="1573831605253" duration="179000" />
+      <workItem from="1574351502013" duration="20000" />
+      <workItem from="1574428670764" duration="24000" />
+      <workItem from="1574784337893" duration="481000" />
+      <workItem from="1574947070737" duration="125000" />
+    </task>
+    <task id="LOCAL-00001" summary="通用mapper的搭建">
+      <created>1573144891338</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573144891339</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改userInfo实体类">
+      <created>1573215659740</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573215659740</updated>
+    </task>
+    <task id="LOCAL-00003" summary="搭建基础框架">
+      <created>1573225395711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573225395711</updated>
+    </task>
+    <task id="LOCAL-00004" summary="搭建基础框架">
+      <created>1573225465475</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573225465475</updated>
+    </task>
+    <task id="LOCAL-00005" summary="docker安装dubbo/admin">
+      <created>1573229606357</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573229606357</updated>
+    </task>
+    <task id="LOCAL-00006" summary="客户端服务端调通">
+      <created>1573292925146</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573292925146</updated>
+    </task>
+    <task id="LOCAL-00007" summary="删除system.out">
+      <created>1573293019605</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573293019605</updated>
+    </task>
+    <task id="LOCAL-00008" summary="1.增加商品分类接口&#10;2.CrossOrigin 解决跨域问题">
+      <created>1573566879439</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573566879439</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1.查询分类接口&#10;2.添加数据库文件 bean 下">
+      <created>1573568727687</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573568727687</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:D:/IntelliJ IDEA/IDEAProjects/gmall/gmall-util-web" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="通用mapper的搭建" />
+    <MESSAGE value="修改userInfo实体类" />
+    <MESSAGE value="搭建基础框架" />
+    <MESSAGE value="docker安装dubbo/admin" />
+    <MESSAGE value="客户端服务端调通" />
+    <MESSAGE value="删除system.out" />
+    <MESSAGE value="1.增加商品分类接口&#10;2.CrossOrigin 解决跨域问题" />
+    <MESSAGE value="1.查询分类接口&#10;2.添加数据库文件 bean 下" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.查询分类接口&#10;2.添加数据库文件 bean 下" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="662" y="337" key="com.intellij.ide.util.TipDialog" timestamp="1574947359418">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="662" y="337" key="com.intellij.ide.util.TipDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574947359418" />
+  </component>
+</project>
