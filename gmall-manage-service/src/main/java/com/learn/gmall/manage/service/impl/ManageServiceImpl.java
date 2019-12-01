@@ -82,7 +82,7 @@ public class ManageServiceImpl implements ManageService {
 
         Example example = new Example(PmsBaseAttrValue.class);
         example.createCriteria().andEqualTo("attrId",id);
-        attrInfoMapper.deleteByExample(example);
+        attrValueMapper.deleteByExample(example);
 
         for (PmsBaseAttrValue attrValue: pmsBaseAttrInfo.getAttrValueList()) {
             attrValue.setAttrId(id);

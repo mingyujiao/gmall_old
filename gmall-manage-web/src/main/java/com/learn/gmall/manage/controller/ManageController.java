@@ -3,10 +3,8 @@ package com.learn.gmall.manage.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.learn.gmall.bean.*;
 import com.learn.gmall.service.ManageService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +20,7 @@ public class ManageController {
     @Reference
     ManageService manageService;
 
-    @PostMapping("getBaseCatalog1")
+    @PostMapping("getCatalog1")
     public List<PmsBaseCatalog1> getBaseCatalog1(){
 
         List<PmsBaseCatalog1> pmsBaseCatalog1s = manageService.getPmsBaseCatalog1();
@@ -30,7 +28,7 @@ public class ManageController {
         return pmsBaseCatalog1s;
     }
 
-    @PostMapping("getBaseCatalog2")
+    @PostMapping("getCatalog2")
     public List<PmsBaseCatalog2> getBaseCatalog2(String catalog1Id){
 
         List<PmsBaseCatalog2> pmsBaseCatalog2 = manageService.getPmsBaseCatalog2(catalog1Id);
@@ -38,7 +36,7 @@ public class ManageController {
         return pmsBaseCatalog2;
     }
 
-    @PostMapping("getBaseCatalog3")
+    @PostMapping("getCatalog3")
     public List<PmsBaseCatalog3> getBaseCatalog3(String catalog2Id){
 
         List<PmsBaseCatalog3> pmsBaseCatalog3 = manageService.getPmsBaseCatalog3(catalog2Id);
@@ -46,7 +44,7 @@ public class ManageController {
         return pmsBaseCatalog3;
     }
 
-    @PostMapping("getAttrInfoList")
+    @GetMapping("attrInfoList")
     public List<PmsBaseAttrInfo> getPmsBaseAttrInfoList(String catalog3Id){
 
         List<PmsBaseAttrInfo> attrInfos = manageService.getPmsBaseAttrInfo(catalog3Id);
@@ -63,9 +61,9 @@ public class ManageController {
     }
 
     @PostMapping("getAttrValueList")
-    public List<PmsBaseAttrValue> getAttrValueList (String atrrId){
+    public List<PmsBaseAttrValue> getAttrValueList (String attrId){
 
-        PmsBaseAttrInfo pmsBaseInfo = manageService.getPmsBaseInfo(atrrId);
+        PmsBaseAttrInfo pmsBaseInfo = manageService.getPmsBaseInfo(attrId);
 
         return pmsBaseInfo.getAttrValueList();
     }

@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f666c1f-e4a0-49ce-9995-300029f4c544" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_dubbo_2_6_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-bean/gmall-bean.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-bean/gmall-bean.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-interface/gmall-interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-interface/gmall-interface.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-interface/target/classes/com/learn/gmall/service/ManageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-interface/target/classes/com/learn/gmall/service/ManageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/src/test/java/com/learn/gmall/gmallparent/GmallParentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/src/test/java/com/learn/gmall/gmallparent/GmallParentApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-util-common/gmall-util-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-util-common/gmall-util-common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-util-service/gmall-util-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-util-service/gmall-util-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-util-web/gmall-util-web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-util-web/gmall-util-web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/learn/gmall/manage/service/impl/ManageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/learn/gmall/manage/service/impl/ManageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-service/target/classes/com/learn/gmall/manage/service/impl/ManageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-service/target/classes/com/learn/gmall/manage/service/impl/ManageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/java/com/learn/gmall/manage/controller/ManageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/java/com/learn/gmall/manage/controller/ManageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/target/classes/com/learn/gmall/manage/controller/ManageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/target/classes/com/learn/gmall/manage/controller/ManageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user-manage/target/classes/META-INF/gmall-user-manage.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user-manage/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user-manage/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user-manage/target/classes/com/learn/gmall/user/bean/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user-manage/target/classes/com/learn/gmall/user/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user-manage/target/classes/com/learn/gmall/user/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +105,11 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -128,7 +132,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -151,18 +155,8 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GmallParentApplication">
+  <component name="RunManager" selected="Spring Boot.GmallManageWebApplication">
     <configuration name="GmallManageServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gmall-manage-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.gmall.manage.GmallManageServiceApplication" />
@@ -200,25 +194,44 @@
     </configuration>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <option name="contentProportion" value="0.1411043" />
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ac5edcfa" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ac5edcfa" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1bf4c336" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.21421269" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:gmall" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:gmall" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@77dee5c5" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
+  </component>
+  <component name="SpringBeansView">
+    <option name="showImplicitBeans" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -245,6 +258,7 @@
       <workItem from="1574428670764" duration="24000" />
       <workItem from="1574784337893" duration="481000" />
       <workItem from="1574947070737" duration="125000" />
+      <workItem from="1574947351763" duration="3935000" />
     </task>
     <task id="LOCAL-00001" summary="通用mapper的搭建">
       <created>1573144891338</created>
@@ -309,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573568727687</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="1.提交idea配置文件">
+      <created>1574947605917</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1574947605917</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,12 +388,77 @@
     <MESSAGE value="删除system.out" />
     <MESSAGE value="1.增加商品分类接口&#10;2.CrossOrigin 解决跨域问题" />
     <MESSAGE value="1.查询分类接口&#10;2.添加数据库文件 bean 下" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.查询分类接口&#10;2.添加数据库文件 bean 下" />
+    <MESSAGE value="1.提交idea配置文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.提交idea配置文件" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="662" y="337" key="com.intellij.ide.util.TipDialog" timestamp="1574947359418">
+    <state x="705" y="264" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1574947675173">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="662" y="337" key="com.intellij.ide.util.TipDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574947359418" />
+    <state x="705" y="264" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574947675173" />
+    <state x="425" y="76" key="CommitChangelistDialog2" timestamp="1574947604717">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="425" y="76" key="CommitChangelistDialog2/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574947604717" />
+    <state width="1589" height="379" key="GridCell.Tab.0.bottom" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.0.center" timestamp="1574953401646">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401646" />
+    <state width="1589" height="379" key="GridCell.Tab.0.left" timestamp="1574953401646">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401646" />
+    <state width="1589" height="379" key="GridCell.Tab.0.right" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.1.bottom" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.1.center" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.1.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.1.left" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.1.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.1.right" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.1.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.2.bottom" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.2.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.2.center" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.2.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.2.left" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.2.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state width="1589" height="379" key="GridCell.Tab.2.right" timestamp="1574953401647">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="1589" height="379" key="GridCell.Tab.2.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574953401647" />
+    <state x="413" y="113" key="SettingsEditor" timestamp="1574947666340">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="413" y="113" key="SettingsEditor/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574947666340" />
+    <state x="517" y="223" key="Vcs.Push.Dialog.v2" timestamp="1574947609390">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="517" y="223" key="Vcs.Push.Dialog.v2/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1574947609390" />
+    <state x="662" y="337" key="com.intellij.ide.util.TipDialog" timestamp="1575215779452">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="662" y="337" key="com.intellij.ide.util.TipDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1575215779452" />
   </component>
 </project>
