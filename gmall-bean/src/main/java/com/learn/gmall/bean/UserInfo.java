@@ -1,7 +1,6 @@
 package com.learn.gmall.bean;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -9,17 +8,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 
-/**
- * @author jiaomingyu5778@gmail.com
- * @date 2019/11/7 23:54
- */
+// 实体类包含 属性，get set 方法
 @Data
-@NoArgsConstructor
 public class UserInfo implements Serializable {
-    private static final long serialVersionUID = 2929714167349587316L;
-    @Id
-    @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    // 通用mapper 的注解
+    @Id // 表示主键
+    @Column // 普通字段列
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 获取数据库主键自增！ mysql  GenerationType.IDENTITY  oracle :GenerationType.AUTO
     private String id;
     @Column
     private String loginName;
@@ -37,5 +33,6 @@ public class UserInfo implements Serializable {
     private String headImg;
     @Column
     private String userLevel;
+
 
 }

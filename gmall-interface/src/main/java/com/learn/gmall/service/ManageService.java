@@ -10,17 +10,23 @@ import java.util.List;
  */
 public interface ManageService {
 
-    public List<PmsBaseCatalog1> getPmsBaseCatalog1();
+    public List<BaseCatalog1> getBaseCatalog1();
 
-    public List<PmsBaseCatalog2> getPmsBaseCatalog2(String catalog1Id);
+    public List<BaseCatalog2> getBaseCatalog2(String catalog1Id);
 
-    public List<PmsBaseCatalog3> getPmsBaseCatalog3(String catalog2Id);
+    public List<BaseCatalog3> getBaseCatalog3(String catalog2Id);
 
-    public List<PmsBaseAttrInfo> getPmsBaseAttrInfo(String catalog3Id);
+    public List<BaseAttrInfo> getBaseAttrInfo(String catalog3Id);
 
-    public void saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo);
+    public void saveAttrInfo(BaseAttrInfo baseAttrInfo);
 
-    public PmsBaseAttrInfo getPmsBaseInfo(String atrrId);
+    public BaseAttrInfo getBaseInfo(String atrrId);
 
-    public void delPmsBaseAttrValue(PmsBaseAttrValue pmsBaseAttrValue);
+    public void delBaseAttrValue(BaseAttrValue baseAttrValue);
+
+    public List<BaseSaleAttr> getBaseSaleAttrList();
+
+    public void saveSpuInfo(SpuInfo spuInfo);
+
+    public List<SpuInfo> getSupList(String catalog3Id);
 }

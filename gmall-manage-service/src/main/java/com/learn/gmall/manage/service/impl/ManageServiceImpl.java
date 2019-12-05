@@ -20,56 +20,71 @@ import java.util.List;
 public class ManageServiceImpl implements ManageService {
 
     @Autowired
-    PmsBaseCatalog1Mapper catalog1Mapper;
+    SpuInfoMapper spuInfoMapper;
 
     @Autowired
-    PmsBaseCatalog2Mapper catalog2Mapper;
+    BaseSaleAttrMapper baseSaleAttrMapper;
 
     @Autowired
-    PmsBaseCatalog3Mapper catalog3Mapper;
+    SpuImageMapper spuImageMapper;
 
     @Autowired
-    PmsBaseAttrInfoMapper attrInfoMapper;
+    SpuSaleAttrMapper spuSaleAttrMapper;
 
     @Autowired
-    PmsBaseAttrValueMapper attrValueMapper;
+    SpuSaleAttrValueMapper spuSaleAttrValueMapper;
+
+    @Autowired
+    BaseCatalog1Mapper catalog1Mapper;
+
+    @Autowired
+    BaseCatalog2Mapper catalog2Mapper;
+
+    @Autowired
+    BaseCatalog3Mapper catalog3Mapper;
+
+    @Autowired
+    BaseAttrInfoMapper attrInfoMapper;
+
+    @Autowired
+    BaseAttrValueMapper attrValueMapper;
 
     @Override
-    public List<PmsBaseCatalog1> getPmsBaseCatalog1() {
+    public List<BaseCatalog1> getBaseCatalog1() {
         return catalog1Mapper.selectAll();
     }
 
     @Override
-    public List<PmsBaseCatalog2> getPmsBaseCatalog2(String catalog1Id) {
-        PmsBaseCatalog2 pmsBaseCatalog2 = new PmsBaseCatalog2();
+    public List<BaseCatalog2> getBaseCatalog2(String catalog1Id) {
+        BaseCatalog2 pmsBaseCatalog2 = new BaseCatalog2();
         pmsBaseCatalog2.setCatalog1Id(catalog1Id);
-        List<PmsBaseCatalog2> pmsBaseCatalog2s = catalog2Mapper.select(pmsBaseCatalog2);
+        List<BaseCatalog2> pmsBaseCatalog2s = catalog2Mapper.select(pmsBaseCatalog2);
         return pmsBaseCatalog2s;
     }
 
     @Override
-    public List<PmsBaseCatalog3> getPmsBaseCatalog3(String catalog2Id) {
-        PmsBaseCatalog3 pmsBaseCatalog3 = new PmsBaseCatalog3();
+    public List<BaseCatalog3> getBaseCatalog3(String catalog2Id) {
+        BaseCatalog3 pmsBaseCatalog3 = new BaseCatalog3();
         pmsBaseCatalog3.setCatalog2Id(catalog2Id);
-        List<PmsBaseCatalog3> pmsBaseCatalog3s = catalog3Mapper.select(pmsBaseCatalog3);
+        List<BaseCatalog3> pmsBaseCatalog3s = catalog3Mapper.select(pmsBaseCatalog3);
         return pmsBaseCatalog3s;
     }
 
     @Override
-    public List<PmsBaseAttrInfo> getPmsBaseAttrInfo(String catalog3Id) {
+    public List<BaseAttrInfo> getBaseAttrInfo(String catalog3Id) {
 
-        Example example = new Example(PmsBaseAttrInfo.class);
+        Example example = new Example(BaseAttrInfo.class);
 
         example.createCriteria().andEqualTo("catalog3Id", catalog3Id);
 
-        List<PmsBaseAttrInfo> pmsBaseAttrInfos = attrInfoMapper.selectByExample(example);
+        List<BaseAttrInfo> baseAttrInfos = attrInfoMapper.selectByExample(example);
 
-        return pmsBaseAttrInfos;
+        return baseAttrInfos;
     }
 
     @Override
     @Transient
-    public void saveAttrInfo(PmsBaseAttrInfo pmsBaseAttrInfo) {
+    public void saveAttrInfo(BaseAttrInfo pmsBaseAttrInfo) {
 
         if (StringUtils.isNotBlank(pmsBaseAttrInfo.getId())) {
             attrInfoMapper.updateByPrimaryKey(pmsBaseAttrInfo);
@@ -80,11 +95,11 @@ public class ManageServiceImpl implements ManageService {
 
         String id = pmsBaseAttrInfo.getId();
 
-        Example example = new Example(PmsBaseAttrValue.class);
+        Example example = new Example(BaseAttrValue.class);
         example.createCriteria().andEqualTo("attrId",id);
         attrValueMapper.deleteByExample(example);
 
-        for (PmsBaseAttrValue attrValue: pmsBaseAttrInfo.getAttrValueList()) {
+        for (BaseAttrValue attrValue: pmsBaseAttrInfo.getAttrValueList()) {
             attrValue.setAttrId(id);
             attrValueMapper.insertSelective(attrValue);
         }
@@ -92,14 +107,14 @@ public class ManageServiceImpl implements ManageService {
     }
 
     @Override
-    public PmsBaseAttrInfo getPmsBaseInfo(String atrrId) {
+    public BaseAttrInfo getBaseInfo(String atrrId) {
 
-        PmsBaseAttrInfo pmsBaseAttrInfo = attrInfoMapper.selectByPrimaryKey(atrrId);
+        BaseAttrInfo pmsBaseAttrInfo = attrInfoMapper.selectByPrimaryKey(atrrId);
 
-        PmsBaseAttrValue attrValueQuery = new PmsBaseAttrValue();
+        BaseAttrValue attrValueQuery = new BaseAttrValue();
         attrValueQuery.setAttrId(atrrId);
 
-        List<PmsBaseAttrValue> attrValueList = attrValueMapper.select(attrValueQuery);
+        List<BaseAttrValue> attrValueList = attrValueMapper.select(attrValueQuery);
 
         pmsBaseAttrInfo.setAttrValueList(attrValueList);
 
@@ -107,12 +122,57 @@ public class ManageServiceImpl implements ManageService {
     }
 
     @Override
-    public void delPmsBaseAttrValue(@Param(value="id")PmsBaseAttrValue pmsBaseAttrValue) {
+    public void delBaseAttrValue(@Param(value="id")BaseAttrValue pmsBaseAttrValue) {
 
-        Example example = new Example(PmsBaseAttrValue.class);
+        Example example = new Example(BaseAttrValue.class);
         example.createCriteria().andEqualTo("id",pmsBaseAttrValue.getId());
 
         attrValueMapper.deleteByExample(example);
+    }
+
+    @Override
+    public List<BaseSaleAttr> getBaseSaleAttrList() {
+        return baseSaleAttrMapper.selectAll();
+    }
+
+    @Override
+    @Transient
+    public void saveSpuInfo(SpuInfo spuInfo) {
+        if (StringUtils.isNotBlank(spuInfo.getId())) {
+            spuInfoMapper.updateByPrimaryKey(spuInfo);
+        } else {
+            spuInfo.setId(null);
+            spuInfoMapper.insertSelective(spuInfo);
+        }
+
+        List<SpuImage> imageList = spuInfo.getSpuImageList();
+
+        for (SpuImage image: imageList) {
+            image.setSpuId(spuInfo.getId());
+            spuImageMapper.insertSelective(image);
+        }
+
+        List<SpuSaleAttr> spuSaleAttrs = spuInfo.getSpuSaleAttrList();
+
+        for (SpuSaleAttr sale: spuSaleAttrs) {
+            sale.setSpuId(spuInfo.getId());
+            spuSaleAttrMapper.insertSelective(sale);
+
+            List<SpuSaleAttrValue> spuSaleAttrValues = sale.getSpuSaleAttrValueList();
+
+            for (SpuSaleAttrValue saleValue: spuSaleAttrValues) {
+                saleValue.setSpuId(spuInfo.getId());
+                saleValue.setSaleAttrId(sale.getId());
+                spuSaleAttrValueMapper.insertSelective(saleValue);
+            }
+        }
+    }
+
+    @Override
+    public List<SpuInfo> getSupList(String catalog3Id) {
+        SpuInfo spuInfo = new SpuInfo();
+        spuInfo.setCatalog3Id(catalog3Id);
+        return spuInfoMapper.select(spuInfo);
     }
 
 

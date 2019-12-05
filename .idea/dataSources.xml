@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="gmall" uuid="9259e3bb-dc5e-4c12-a2de-ee3c5237938f">
+    <data-source source="LOCAL" name="gmall [2]" uuid="6a1f99ae-2fce-464e-b8a8-9c38d04591c4">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://gmall.service:3306/gmall</jdbc-url>
+      <jdbc-url>jdbc:mysql://gmall.service:3306/gmall_test</jdbc-url>
     </data-source>
   </component>
 </project>
