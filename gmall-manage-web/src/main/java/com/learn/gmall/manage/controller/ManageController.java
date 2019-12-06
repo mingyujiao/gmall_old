@@ -90,4 +90,10 @@ public class ManageController {
         List<SpuInfo> supList = manageService.getSupList(catalog3Id);
         return supList;
     }
+
+    @GetMapping("spuImageList")
+    public List<SpuImage> spuImageList(String spuId){
+        List<SpuImage> spuImageList = manageService.getSpuImageList(spuId);
+        return spuImageList;
+    }
 }

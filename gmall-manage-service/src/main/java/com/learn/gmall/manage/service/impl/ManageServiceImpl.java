@@ -79,6 +79,13 @@ public class ManageServiceImpl implements ManageService {
 
         List<BaseAttrInfo> baseAttrInfos = attrInfoMapper.selectByExample(example);
 
+        for (BaseAttrInfo baseAttrInfo : baseAttrInfos) {
+            BaseAttrValue attrValue = new BaseAttrValue();
+            attrValue.setAttrId(baseAttrInfo.getId());
+            List<BaseAttrValue> attrValues = attrValueMapper.select(attrValue);
+            baseAttrInfo.setAttrValueList(attrValues);
+        }
+
         return baseAttrInfos;
     }
 
@@ -173,6 +180,13 @@ public class ManageServiceImpl implements ManageService {
         SpuInfo spuInfo = new SpuInfo();
         spuInfo.setCatalog3Id(catalog3Id);
         return spuInfoMapper.select(spuInfo);
+    }
+
+    @Override
+    public List<SpuImage> getSpuImageList(String spuId) {
+        SpuImage spuImage = new SpuImage();
+        spuImage.setSpuId(spuId);
+        return spuImageMapper.select(spuImage);
     }
 
 

@@ -29,4 +29,6 @@ public interface ManageService {
     public void saveSpuInfo(SpuInfo spuInfo);
 
     public List<SpuInfo> getSupList(String catalog3Id);
+
+    public List<SpuImage> getSpuImageList(String spuId);
 }
