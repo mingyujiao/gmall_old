@@ -84,22 +84,22 @@ public class ManageServiceImpl implements ManageService {
 
     @Override
     @Transient
-    public void saveAttrInfo(BaseAttrInfo pmsBaseAttrInfo) {
+    public void saveAttrInfo(BaseAttrInfo baseAttrInfo) {
 
-        if (StringUtils.isNotBlank(pmsBaseAttrInfo.getId())) {
-            attrInfoMapper.updateByPrimaryKey(pmsBaseAttrInfo);
+        if (StringUtils.isNotBlank(baseAttrInfo.getId())) {
+            attrInfoMapper.updateByPrimaryKey(baseAttrInfo);
         } else {
-            pmsBaseAttrInfo.setId(null);
-            attrInfoMapper.insertSelective(pmsBaseAttrInfo);
+            baseAttrInfo.setId(null);
+            attrInfoMapper.insertSelective(baseAttrInfo);
         }
 
-        String id = pmsBaseAttrInfo.getId();
+        String id = baseAttrInfo.getId();
 
         Example example = new Example(BaseAttrValue.class);
         example.createCriteria().andEqualTo("attrId",id);
         attrValueMapper.deleteByExample(example);
 
-        for (BaseAttrValue attrValue: pmsBaseAttrInfo.getAttrValueList()) {
+        for (BaseAttrValue attrValue: baseAttrInfo.getAttrValueList()) {
             attrValue.setAttrId(id);
             attrValueMapper.insertSelective(attrValue);
         }
