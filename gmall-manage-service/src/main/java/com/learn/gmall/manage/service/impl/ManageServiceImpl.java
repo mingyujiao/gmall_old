@@ -20,7 +20,19 @@ import java.util.List;
 public class ManageServiceImpl implements ManageService {
 
     @Autowired
+    SkuImageMapper skuImageMapper;
+
+    @Autowired
+    SkuAttrValueMapper skuAttrValueMapper;
+
+    @Autowired
+    SkuSaleAttrValueMapper skuSaleAttrValueMapper;
+
+    @Autowired
     SpuInfoMapper spuInfoMapper;
+
+    @Autowired
+    SkuInfoMapper skuInfoMapper;
 
     @Autowired
     BaseSaleAttrMapper baseSaleAttrMapper;
@@ -48,6 +60,7 @@ public class ManageServiceImpl implements ManageService {
 
     @Autowired
     BaseAttrValueMapper attrValueMapper;
+
 
     @Override
     public List<BaseCatalog1> getBaseCatalog1() {
@@ -187,6 +200,60 @@ public class ManageServiceImpl implements ManageService {
         SpuImage spuImage = new SpuImage();
         spuImage.setSpuId(spuId);
         return spuImageMapper.select(spuImage);
+    }
+
+    @Override
+    public List<SpuSaleAttr> getSpuSaleAttrList(String spuId) {
+
+        SpuSaleAttr spuSaleAttr = new SpuSaleAttr();
+        spuSaleAttr.setSpuId(spuId);
+
+        List<SpuSaleAttr> spuSaleAttrs = spuSaleAttrMapper.select(spuSaleAttr);
+
+        for (SpuSaleAttr saleAttr : spuSaleAttrs) {
+
+            SpuSaleAttrValue spuSaleAttrValue = new SpuSaleAttrValue();
+
+            spuSaleAttrValue.setSpuId(spuId);
+            spuSaleAttrValue.setSaleAttrId(saleAttr.getId());
+
+            List<SpuSaleAttrValue> spuSaleAttrValues = spuSaleAttrValueMapper.select(spuSaleAttrValue);
+
+            saleAttr.setSpuSaleAttrValueList(spuSaleAttrValues);
+        }
+
+        return spuSaleAttrs;
+    }
+
+    @Override
+    public void saveSkuInfo(SkuInfo skuInfo) {
+        if (StringUtils.isNotBlank(skuInfo.getId())) {
+            skuInfoMapper.updateByPrimaryKey(skuInfo);
+        } else {
+            skuInfo.setId(null);
+            skuInfoMapper.insert(skuInfo);
+        }
+
+        List<SkuImage> skuImageList = skuInfo.getSkuImageList();
+
+        for (SkuImage skuImage : skuImageList) {
+            skuImage.setSkuId(skuInfo.getId());
+            skuImageMapper.insert(skuImage);
+        }
+
+        List<SkuAttrValue> skuAttrValueList = skuInfo.getSkuAttrValueList();
+
+        for (SkuAttrValue skuAttrValue : skuAttrValueList) {
+            skuAttrValue.setSkuId(skuInfo.getId());
+            skuAttrValueMapper.insert(skuAttrValue);
+        }
+
+        List<SkuSaleAttrValue> skuSaleAttrValueList = skuInfo.getSkuSaleAttrValueList();
+
+        for (SkuSaleAttrValue skuSaleAttrValue : skuSaleAttrValueList) {
+            skuSaleAttrValue.setSkuId(skuInfo.getId());
+            skuSaleAttrValueMapper.insert(skuSaleAttrValue);
+        }
     }
 
 

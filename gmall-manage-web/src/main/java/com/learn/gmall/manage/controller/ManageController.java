@@ -96,4 +96,16 @@ public class ManageController {
         List<SpuImage> spuImageList = manageService.getSpuImageList(spuId);
         return spuImageList;
     }
+
+    @GetMapping("spuSaleAttrList")
+    public List<SpuSaleAttr> spuSaleAttrList(String spuId){
+        List<SpuSaleAttr> spuSaleAttrList = manageService.getSpuSaleAttrList(spuId);
+        return spuSaleAttrList;
+    }
+
+    @PostMapping("saveSkuInfo")
+    public String saveSkuInfo(@RequestBody SkuInfo skuInfo){
+        manageService.saveSkuInfo(skuInfo);
+        return "success";
+    }
 }

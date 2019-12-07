@@ -31,4 +31,8 @@ public interface ManageService {
     public List<SpuInfo> getSupList(String catalog3Id);
 
     public List<SpuImage> getSpuImageList(String spuId);
+
+    public List<SpuSaleAttr> getSpuSaleAttrList(String spuId);
+
+    public void saveSkuInfo(SkuInfo skuInfo);
 }
