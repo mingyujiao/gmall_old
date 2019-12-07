@@ -2,9 +2,7 @@ package com.learn.gmall.bean;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
 
@@ -13,6 +11,7 @@ public class SpuSaleAttr implements Serializable {
 
     @Id
     @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String id ;
 
     @Column
