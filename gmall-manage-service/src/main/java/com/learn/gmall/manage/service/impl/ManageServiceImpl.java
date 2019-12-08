@@ -85,20 +85,7 @@ public class ManageServiceImpl implements ManageService {
 
     @Override
     public List<BaseAttrInfo> getBaseAttrInfo(String catalog3Id) {
-
-        Example example = new Example(BaseAttrInfo.class);
-
-        example.createCriteria().andEqualTo("catalog3Id", catalog3Id);
-
-        List<BaseAttrInfo> baseAttrInfos = attrInfoMapper.selectByExample(example);
-
-        for (BaseAttrInfo baseAttrInfo : baseAttrInfos) {
-            BaseAttrValue attrValue = new BaseAttrValue();
-            attrValue.setAttrId(baseAttrInfo.getId());
-            List<BaseAttrValue> attrValues = attrValueMapper.select(attrValue);
-            baseAttrInfo.setAttrValueList(attrValues);
-        }
-
+        List<BaseAttrInfo> baseAttrInfos = attrInfoMapper.getBaseAttrInfoListByCatalog3Id(catalog3Id);
         return baseAttrInfos;
     }
 
@@ -182,7 +169,6 @@ public class ManageServiceImpl implements ManageService {
 
             for (SpuSaleAttrValue saleValue: spuSaleAttrValues) {
                 saleValue.setSpuId(spuInfo.getId());
-                saleValue.setSaleAttrId(sale.getId());
                 spuSaleAttrValueMapper.insertSelective(saleValue);
             }
         }
@@ -204,25 +190,7 @@ public class ManageServiceImpl implements ManageService {
 
     @Override
     public List<SpuSaleAttr> getSpuSaleAttrList(String spuId) {
-
-        SpuSaleAttr spuSaleAttr = new SpuSaleAttr();
-        spuSaleAttr.setSpuId(spuId);
-
-        List<SpuSaleAttr> spuSaleAttrs = spuSaleAttrMapper.select(spuSaleAttr);
-
-        for (SpuSaleAttr saleAttr : spuSaleAttrs) {
-
-            SpuSaleAttrValue spuSaleAttrValue = new SpuSaleAttrValue();
-
-            spuSaleAttrValue.setSpuId(spuId);
-            spuSaleAttrValue.setSaleAttrId(saleAttr.getId());
-
-            List<SpuSaleAttrValue> spuSaleAttrValues = spuSaleAttrValueMapper.select(spuSaleAttrValue);
-
-            saleAttr.setSpuSaleAttrValueList(spuSaleAttrValues);
-        }
-
-        return spuSaleAttrs;
+        return spuSaleAttrMapper.getSpuSaleAttrListBySpuId(spuId);
     }
 
     @Override

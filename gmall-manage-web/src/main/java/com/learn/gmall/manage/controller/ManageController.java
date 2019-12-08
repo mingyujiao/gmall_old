@@ -3,6 +3,7 @@ package com.learn.gmall.manage.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.learn.gmall.bean.*;
 import com.learn.gmall.service.ManageService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 // 解决跨域问题
 @CrossOrigin
+
 public class ManageController {
 
     @Reference
@@ -108,4 +110,5 @@ public class ManageController {
         manageService.saveSkuInfo(skuInfo);
         return "success";
     }
+
 }
