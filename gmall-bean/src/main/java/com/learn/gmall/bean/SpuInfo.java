@@ -21,7 +21,7 @@ public class SpuInfo implements Serializable {
     private String description;
 
     @Column
-    private  String catalog3Id;
+    private String catalog3Id;
     // 销售属性集合
     @Transient
     private List<SpuSaleAttr> spuSaleAttrList;

@@ -1,4 +1,5 @@
 package com.learn.gmall.bean;
+
 import lombok.Data;
 
 import javax.persistence.*;

@@ -9,14 +9,14 @@ public class SkuLsParams implements Serializable {
 
     // keyword = skuName
 
-    String  keyword;
+    String keyword;
 
     String catalog3Id;
 
     String[] valueId;
 
-    int pageNo=1;
+    int pageNo = 1;
 
-    int pageSize=20;
+    int pageSize = 20;
 
 }

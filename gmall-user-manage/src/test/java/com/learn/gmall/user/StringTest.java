@@ -10,7 +10,7 @@ import org.junit.Test;
 public class StringTest {
 
     @Test
-    public void testStr(){
+    public void testStr() {
         String str = "investmentProductsCode";
     }
 }

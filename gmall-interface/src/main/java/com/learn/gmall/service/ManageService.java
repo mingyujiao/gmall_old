@@ -1,6 +1,7 @@
 package com.learn.gmall.service;
 
 import com.learn.gmall.bean.*;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -35,4 +36,7 @@ public interface ManageService {
     public List<SpuSaleAttr> getSpuSaleAttrList(String spuId);
 
     public void saveSkuInfo(SkuInfo skuInfo);
+
+    // 查询skuinfo
+    public SkuInfo getSkuInfo(String skuId);
 }

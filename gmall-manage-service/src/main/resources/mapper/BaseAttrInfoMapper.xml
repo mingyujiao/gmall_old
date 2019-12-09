@@ -20,7 +20,6 @@
         base_attr_info bi
         INNER JOIN base_attr_value bv ON bi.id = bv.attr_id
         where bi.catalog3_id = #{catalog3Id}
-
     </select>
 
 </mapper>

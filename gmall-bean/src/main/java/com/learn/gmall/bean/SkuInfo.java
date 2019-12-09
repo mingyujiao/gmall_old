@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Data
-public class SkuInfo implements Serializable{
+public class SkuInfo implements Serializable {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

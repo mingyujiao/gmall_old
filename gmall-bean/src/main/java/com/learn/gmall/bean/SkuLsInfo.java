@@ -21,7 +21,7 @@ public class SkuLsInfo implements Serializable {
     String skuDefaultImg;
 
     // 自定义一个字段来保存热度评分
-    Long hotScore=0L;
+    Long hotScore = 0L;
 
     List<SkuLsAttrValue> skuAttrValueList;
 

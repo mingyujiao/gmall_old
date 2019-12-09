@@ -6,12 +6,12 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
-public class SpuSaleAttrValue implements Serializable{
+public class SpuSaleAttrValue implements Serializable {
 
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    String id ;
+    String id;
 
     @Column
     String spuId;

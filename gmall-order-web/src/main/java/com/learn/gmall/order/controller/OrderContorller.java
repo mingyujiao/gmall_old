@@ -19,7 +19,7 @@ public class OrderContorller {
     UserService userService;
 
     @GetMapping("trade")
-    public UserInfo trade(@RequestParam("userId") String userId){
+    public UserInfo trade(@RequestParam("userId") String userId) {
         UserInfo userInfo = userService.getUserInfoById(userId);
         return userInfo;
     }

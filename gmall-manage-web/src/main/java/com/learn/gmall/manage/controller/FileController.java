@@ -29,13 +29,13 @@ public class FileController {
     String fileServerUrl;
 
     @PostMapping("fileUpload")
-    public String fileUpload(@RequestParam("file")MultipartFile file) throws IOException, MyException, URISyntaxException {
+    public String fileUpload(@RequestParam("file") MultipartFile file) throws IOException, MyException, URISyntaxException {
 
         String confPath = this.getClass().getResource("/tracker.conf").toURI().getPath();
         ClientGlobal.init(confPath);
-        TrackerClient trackerClient=new TrackerClient();
-        TrackerServer trackerServer=trackerClient.getConnection();
-        StorageClient storageClient=new StorageClient(trackerServer,null);
+        TrackerClient trackerClient = new TrackerClient();
+        TrackerServer trackerServer = trackerClient.getConnection();
+        StorageClient storageClient = new StorageClient(trackerServer, null);
         String originalFilename = file.getOriginalFilename();
         String extName = StringUtils.substringAfterLast(originalFilename, ".");
         String[] upload_file = storageClient.upload_file(file.getBytes(), extName, null);

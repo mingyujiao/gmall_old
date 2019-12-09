@@ -12,7 +12,7 @@ public class SpuSaleAttr implements Serializable {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    String id ;
+    String id;
 
     @Column
     String spuId;

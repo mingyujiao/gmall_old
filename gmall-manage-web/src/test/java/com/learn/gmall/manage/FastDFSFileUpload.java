@@ -18,7 +18,6 @@ import java.net.URISyntaxException;
  * @date 2019/12/3 15:53
  * @email jiaomingyu5778@gmail.com
  * 测试FastDFS上传
- *
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -28,10 +27,10 @@ public class FastDFSFileUpload {
     public void textFileUpload() throws IOException, MyException, URISyntaxException {
         String file = this.getClass().getResource("/tracker.conf").toURI().getPath();
         ClientGlobal.init(file);
-        TrackerClient trackerClient=new TrackerClient();
-        TrackerServer trackerServer=trackerClient.getConnection();
-        StorageClient storageClient=new StorageClient(trackerServer,null);
-        String orginalFilename="F:\\biying\\2019102902.jpg";
+        TrackerClient trackerClient = new TrackerClient();
+        TrackerServer trackerServer = trackerClient.getConnection();
+        StorageClient storageClient = new StorageClient(trackerServer, null);
+        String orginalFilename = "F:\\biying\\2019102902.jpg";
         String[] upload_file = storageClient.upload_file(orginalFilename, "jpg", null);
         for (int i = 0; i < upload_file.length; i++) {
             String s = upload_file[i];

@@ -103,10 +103,10 @@ public class ManageServiceImpl implements ManageService {
         String id = baseAttrInfo.getId();
 
         Example example = new Example(BaseAttrValue.class);
-        example.createCriteria().andEqualTo("attrId",id);
+        example.createCriteria().andEqualTo("attrId", id);
         attrValueMapper.deleteByExample(example);
 
-        for (BaseAttrValue attrValue: baseAttrInfo.getAttrValueList()) {
+        for (BaseAttrValue attrValue : baseAttrInfo.getAttrValueList()) {
             attrValue.setAttrId(id);
             attrValueMapper.insertSelective(attrValue);
         }
@@ -129,10 +129,10 @@ public class ManageServiceImpl implements ManageService {
     }
 
     @Override
-    public void delBaseAttrValue(@Param(value="id")BaseAttrValue pmsBaseAttrValue) {
+    public void delBaseAttrValue(@Param(value = "id") BaseAttrValue pmsBaseAttrValue) {
 
         Example example = new Example(BaseAttrValue.class);
-        example.createCriteria().andEqualTo("id",pmsBaseAttrValue.getId());
+        example.createCriteria().andEqualTo("id", pmsBaseAttrValue.getId());
 
         attrValueMapper.deleteByExample(example);
     }
@@ -154,20 +154,20 @@ public class ManageServiceImpl implements ManageService {
 
         List<SpuImage> imageList = spuInfo.getSpuImageList();
 
-        for (SpuImage image: imageList) {
+        for (SpuImage image : imageList) {
             image.setSpuId(spuInfo.getId());
             spuImageMapper.insertSelective(image);
         }
 
         List<SpuSaleAttr> spuSaleAttrs = spuInfo.getSpuSaleAttrList();
 
-        for (SpuSaleAttr sale: spuSaleAttrs) {
+        for (SpuSaleAttr sale : spuSaleAttrs) {
             sale.setSpuId(spuInfo.getId());
             spuSaleAttrMapper.insertSelective(sale);
 
             List<SpuSaleAttrValue> spuSaleAttrValues = sale.getSpuSaleAttrValueList();
 
-            for (SpuSaleAttrValue saleValue: spuSaleAttrValues) {
+            for (SpuSaleAttrValue saleValue : spuSaleAttrValues) {
                 saleValue.setSpuId(spuInfo.getId());
                 spuSaleAttrValueMapper.insertSelective(saleValue);
             }
@@ -222,6 +222,24 @@ public class ManageServiceImpl implements ManageService {
             skuSaleAttrValue.setSkuId(skuInfo.getId());
             skuSaleAttrValueMapper.insert(skuSaleAttrValue);
         }
+    }
+
+    @Override
+    public SkuInfo getSkuInfo(String skuId) {
+        SkuInfo skuInfo = skuInfoMapper.selectByPrimaryKey(skuId);
+
+        SkuImage skuImage = new SkuImage();
+        skuImage.setSkuId(skuId);
+
+        List<SkuImage> skuImages = skuImageMapper.select(skuImage);
+        skuInfo.setSkuImageList(skuImages);
+
+        SkuAttrValue SkuAttrValue = new SkuAttrValue();
+        SkuAttrValue.setSkuId(skuId);
+        List<SkuAttrValue> SkuAttrValues = skuAttrValueMapper.select(SkuAttrValue);
+        skuInfo.setSkuAttrValueList(SkuAttrValues);
+
+        return skuInfo;
     }
 
 

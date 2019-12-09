@@ -17,7 +17,7 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/allusers")
-    public UserInfo getUserInfoById(String id){
+    public UserInfo getUserInfoById(String id) {
         return userService.getUserInfoById(id);
     }
 }

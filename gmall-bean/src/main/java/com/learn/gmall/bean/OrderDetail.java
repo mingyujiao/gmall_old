@@ -1,4 +1,5 @@
 package com.learn.gmall.bean;
+
 import lombok.Data;
 
 import javax.persistence.*;
@@ -6,7 +7,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
-public class OrderDetail implements Serializable{
+public class OrderDetail implements Serializable {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)

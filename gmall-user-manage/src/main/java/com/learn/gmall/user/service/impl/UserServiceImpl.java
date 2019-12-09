@@ -40,9 +40,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public void updateUserByName(String name, UserInfo userInfo) {
         Example example = new Example(UserInfo.class);
-        example.createCriteria().andEqualTo("name",name);
+        example.createCriteria().andEqualTo("name", name);
 
-        userMapper.updateByExampleSelective(userInfo,example);
+        userMapper.updateByExampleSelective(userInfo, example);
     }
 
     @Override

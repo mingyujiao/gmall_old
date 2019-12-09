@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
-public class CartInfo implements Serializable  {
+public class CartInfo implements Serializable {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -32,7 +32,7 @@ public class CartInfo implements Serializable  {
     BigDecimal skuPrice;
     // 下订单的时候，商品是否勾选
     @Transient
-    String isChecked="0";
+    String isChecked = "0";
 
 
 }
