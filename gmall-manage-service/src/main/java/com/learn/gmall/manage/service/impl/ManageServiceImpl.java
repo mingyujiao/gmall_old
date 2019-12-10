@@ -228,16 +228,18 @@ public class ManageServiceImpl implements ManageService {
     public SkuInfo getSkuInfo(String skuId) {
         SkuInfo skuInfo = skuInfoMapper.selectByPrimaryKey(skuId);
 
-        SkuImage skuImage = new SkuImage();
-        skuImage.setSkuId(skuId);
+        if (skuInfo != null) {
+            SkuImage skuImage = new SkuImage();
+            skuImage.setSkuId(skuId);
 
-        List<SkuImage> skuImages = skuImageMapper.select(skuImage);
-        skuInfo.setSkuImageList(skuImages);
+            List<SkuImage> skuImages = skuImageMapper.select(skuImage);
+            skuInfo.setSkuImageList(skuImages);
 
-        SkuAttrValue SkuAttrValue = new SkuAttrValue();
-        SkuAttrValue.setSkuId(skuId);
-        List<SkuAttrValue> SkuAttrValues = skuAttrValueMapper.select(SkuAttrValue);
-        skuInfo.setSkuAttrValueList(SkuAttrValues);
+            SkuAttrValue SkuAttrValue = new SkuAttrValue();
+            SkuAttrValue.setSkuId(skuId);
+            List<SkuAttrValue> SkuAttrValues = skuAttrValueMapper.select(SkuAttrValue);
+            skuInfo.setSkuAttrValueList(SkuAttrValues);
+        }
 
         return skuInfo;
     }
