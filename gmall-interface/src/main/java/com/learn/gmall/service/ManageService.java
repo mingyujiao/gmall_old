@@ -37,6 +37,22 @@ public interface ManageService {
 
     public void saveSkuInfo(SkuInfo skuInfo);
 
-    // 查询skuinfo
+    /**
+     * 查询skuinfo
+     * @param skuId
+     * @return
+     */
     public SkuInfo getSkuInfo(String skuId);
+
+    /**
+     * 删除销售属性
+     * @param attrId
+     */
+    public void deleteAttrInfoById(String attrId);
+
+    /**
+     * 删除spuId
+     * @param spuId
+     */
+    public void delSpuById(String spuId);
 }

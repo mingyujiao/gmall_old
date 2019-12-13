@@ -244,5 +244,49 @@ public class ManageServiceImpl implements ManageService {
         return skuInfo;
     }
 
+    /**
+     * 删除属性
+     * @param attrId
+     */
+    @Override
+    public void deleteAttrInfoById(String attrId) {
+        if (StringUtils.isNotBlank(attrId)) {
+            BaseAttrValue baseAttrValue = new BaseAttrValue();
+            baseAttrValue.setAttrId(attrId);
+            BaseAttrInfo baseAttrInfo = new BaseAttrInfo();
+            baseAttrInfo.setId(attrId);
+            attrValueMapper.delete(baseAttrValue);
+            attrInfoMapper.delete(baseAttrInfo);
+        }
+    }
+
+    /**
+     * 删除spuId
+     *
+     * @param spuId
+     */
+    @Override
+    public void delSpuById(String spuId) {
+        if (StringUtils.isNotBlank(spuId)) {
+
+            SpuInfo spuInfo = new SpuInfo();
+            spuInfo.setId(spuId);
+
+            SpuImage spuImage = new SpuImage();
+            spuImage.setSpuId(spuId);
+
+            SpuSaleAttr spuSaleAttr = new SpuSaleAttr();
+            spuSaleAttr.setSpuId(spuId);
+
+            SpuSaleAttrValue spuSaleAttrValue = new SpuSaleAttrValue();
+            spuSaleAttrValue.setSpuId(spuId);
+
+            spuSaleAttrValueMapper.delete(spuSaleAttrValue);
+            spuSaleAttrMapper.delete(spuSaleAttr);
+            spuImageMapper.delete(spuImage);
+            spuInfoMapper.delete(spuInfo);
+        }
+    }
+
 
 }

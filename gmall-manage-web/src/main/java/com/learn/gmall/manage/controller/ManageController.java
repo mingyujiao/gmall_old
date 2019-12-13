@@ -109,4 +109,16 @@ public class ManageController {
         return "success";
     }
 
+    @PostMapping("deleteAttrInfoById")
+    public String deleteAttrInfoById(String attrId){
+        manageService.deleteAttrInfoById(attrId);
+        return "success";
+    }
+
+    @PostMapping("delSpuById")
+    public String delSpuById(String spuId){
+        manageService.delSpuById(spuId);
+        return "success";
+    }
+
 }

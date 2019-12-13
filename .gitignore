@@ -1,0 +1,8 @@
+/.idea/
+/gmall-bean/target/
+/gmall-interface/target/
+/gmall-manage-service/target/
+/gmall-manage-web/target/
+/gmall-order-web/target/
+/gmall-parent/target/
+/gmall-user-manage/target/
