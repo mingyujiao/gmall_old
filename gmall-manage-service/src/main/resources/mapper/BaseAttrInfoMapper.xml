@@ -13,7 +13,7 @@
         </collection>
     </resultMap>
 
-    <select id="getBaseAttrInfoListByCatalog3Id" resultMap="bastAttrList">
+    <select id="getBaseAttrInfoListByCatalog3Id" parameterType="java.lang.String" resultMap="bastAttrList">
         SELECT
             bi.id,bi.attr_name,bi.catalog3_id,bv.id as attr_value_id, bv.value_name
         FROM

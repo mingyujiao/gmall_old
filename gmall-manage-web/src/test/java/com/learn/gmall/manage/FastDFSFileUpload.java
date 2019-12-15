@@ -30,7 +30,7 @@ public class FastDFSFileUpload {
         TrackerClient trackerClient = new TrackerClient();
         TrackerServer trackerServer = trackerClient.getConnection();
         StorageClient storageClient = new StorageClient(trackerServer, null);
-        String orginalFilename = "F:\\biying\\2019102902.jpg";
+        String orginalFilename = "C:\\Users\\29109\\Pictures\\Camera Roll\\O1CN01MZp5zh1xKEu1idjQE_!!1776456424.jpg_430x430q90.jpg";
         String[] upload_file = storageClient.upload_file(orginalFilename, "jpg", null);
         for (int i = 0; i < upload_file.length; i++) {
             String s = upload_file[i];

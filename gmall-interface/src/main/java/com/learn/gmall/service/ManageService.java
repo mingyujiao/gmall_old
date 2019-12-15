@@ -1,6 +1,7 @@
 package com.learn.gmall.service;
 
 import com.learn.gmall.bean.*;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -55,4 +56,12 @@ public interface ManageService {
      * @param spuId
      */
     public void delSpuById(String spuId);
+
+    /**
+     * 获取销售属性
+     * @param skuId
+     * @param spuId
+     * @return
+     */
+    public List<SpuSaleAttr> selectSpuSaleAttrListCheckBySku(@Param("skuId") String skuId, @Param("spuId") String spuId);
 }
